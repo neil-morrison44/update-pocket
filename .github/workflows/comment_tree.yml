@@ -28,7 +28,7 @@ jobs:
 
       - id: tree-output
         name: output tree
-        run: echo "::set-output name=tree::${tree pocket}"
+        run: echo "::set-output name=tree::$(tree pocket)"
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v1
