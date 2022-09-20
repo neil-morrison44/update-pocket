@@ -41,10 +41,12 @@ jobs:
             ## New pocket tree:
             <details>
             <summary>Pocket</summary>
-            \n
+
+
             ```
             ${{env.TREE_STRING}}
             ```
-            \n
+
+
             </details>
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
