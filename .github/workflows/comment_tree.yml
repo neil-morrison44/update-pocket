@@ -31,6 +31,6 @@ jobs:
         with:
           comment_includes: "New pocket tree:"
           message: |
-            New pocket tree:
-            $(tree pocket)
+            ## New pocket tree:
+            ${$(tree pocket)}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
