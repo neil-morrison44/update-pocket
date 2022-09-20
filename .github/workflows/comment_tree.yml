@@ -24,11 +24,11 @@ jobs:
         run: python ../updater.py 1 .
 
       - name: echo tree
-        run: echo tree pocket
+        run: tree pocket
 
       - id: tree-output
         name: output tree
-        run: echo "::set-output name=tree::${echo tree pocket}"
+        run: echo "::set-output name=tree::${tree pocket}"
 
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v1
