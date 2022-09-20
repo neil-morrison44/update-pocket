@@ -26,15 +26,11 @@ jobs:
       - name: echo tree
         run: tree pocket
 
-      - id: tree-output
-        name: output tree
-        run: echo "::set-output name=tree::$(tree pocket)"
-
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v1
         with:
           comment_includes: "New pocket tree:"
           message: |
             New pocket tree:
-            ${{ steps.tree-output.outputs.tree }}
+            $(tree pocket)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
